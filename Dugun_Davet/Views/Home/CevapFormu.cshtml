@@ -1,0 +1,54 @@
+﻿@model Dugun_Davet.Models.Cevap
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>CevapFormu</title>
+    <link href="/css/styles.css" rel="stylesheet" />
+</head>
+<body>
+    <form asp-action="CevapFormu" method="post">
+        <table border="0">
+            <div asp-validation-summary="All"></div>
+
+            <tr>
+                <td><label asp-for="Ad">Adınız:</label></td>
+                <td><input asp-for="Ad" /></td>
+            </tr>
+
+            <tr>
+                <td><label asp-for="Soyad">Soyadınız:</label></td>
+                <td><input asp-for="Soyad" /></td>
+            </tr>
+
+            <tr>
+                <td><label asp-for="Email">Email Adresiniz:</label></td>
+                <td><input asp-for="Email" /></td>
+            </tr>
+
+            <tr>
+                <td><label asp-for="Telefon">Telefonunuz:</label></td>
+                <td><input asp-for="Telefon" /></td>
+            </tr>
+
+            <tr>
+                <td><label>Düğüne Gelecek Misiniz?</label></td>
+                <td>
+                    <select asp-for="DuguneGelecekmi">
+                        <option value="">Lütfen Bir Seçim Yapınız!</option>
+                        <option value="true">Evet</option>
+                        <option value="false">Hayır</option>
+                    </select>
+                    <button type="submit">Cevabı Gönder</button>
+                </td>
+            </tr>
+        </table>
+    </form>          
+
+</body>
+</html>
